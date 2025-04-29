@@ -1017,7 +1017,7 @@
     border-radius: 0.25rem;
   }
   .rounded-full {
-    border-radius: calc(infinity * 1px);
+    border-radius: auto;
   }
   .rounded-lg {
     border-radius: var(--radius-lg);

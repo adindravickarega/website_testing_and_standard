@@ -3,44 +3,53 @@ import React from 'react';
 // Table Component to display energy services
 function StandardTable({ data }) {
     return (
-        <div class="relative w-full px-10">
-    <table class="bg-white  w-full text-sm text-left ">
-        <thead class="text-xs text-gray-800 uppercase bg-gray-100">
-            <tr>
-                <th scope="col" class="px-6 py-3">
-                    No
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    item
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    nama
-                </th>
-                <th scope="col" class="px-6 py-3">
-                    Deskripsi Singkat
-                </th>
-                </tr>
+        <div className="relative w-full px-10">
+            <table className="bg-white w-full text-sm text-left">
+                <thead className="text-xs text-gray-800 uppercase bg-gray-100">
+                    <tr>
+                        <th scope="col" className="px-6 py-3">
+                            No
+                        </th>
+                        <th scope="col" className="px-6 py-3">
+                            Item
+                        </th>
+                        <th scope="col" className="px-6 py-3">
+                            Nama
+                        </th>
+                        <th scope="col" className="px-6 py-3">
+                            Deskripsi Singkat
+                        </th>
+                    </tr>
                 </thead>
                 <tbody>
                     {data.map((item) => (
-                        <tr key={item.no} class=" border-2 border-gray-100 text-gray-700">
-                            <td class="px-6 py-4 font-medium text-gray-900">
+                        <tr key={item.no} className="border-2 border-gray-100 text-gray-700">
+                            <td className="px-6 py-4 font-medium text-gray-900">
                                 {item.no}
-                            </td>                            
-                            <td class="px-6 py-4 font-medium ">
+                            </td>
+                            <td className="px-6 py-4 font-medium">
                                 {item.link ? (
-                                    <a className='text-blue-600' href={item.link} target="_blank"  alt={item.item}>{item.item} rel="noopener noreferrer"</a>
+                                    <a
+                                        className="text-blue-600"
+                                        href={item.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        {item.item}
+                                    </a>
                                 ) : (
                                     <span>{item.item}</span>
                                 )}
                             </td>
-                            <td class="px-6 py-4 font-medium ">
+                            <td className="px-6 py-4 font-medium">
                                 {item.nama}
                             </td>
-                            <td class="px-6 py-4 font-medium text-blue-600 ">
-                                {item.description.map((link) => (
-                                <p><a href={`link`}>{link}</a></p>
-                            ))}
+                            <td className="px-6 py-4 font-medium text-blue-600">
+                                {item.description.map((link, index) => (
+                                    <p key={index}>
+                                        <a href={link}>{link}</a>
+                                    </p>
+                                ))}
                             </td>
                         </tr>
                     ))}
@@ -51,4 +60,3 @@ function StandardTable({ data }) {
 }
 
 export default StandardTable;
-
