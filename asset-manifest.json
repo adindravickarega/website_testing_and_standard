@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/website_testing_and_standard/static/css/main.fad07778.css",
+    "main.js": "/website_testing_and_standard/static/js/main.7e85a26b.js",
+    "index.html": "/website_testing_and_standard/index.html",
+    "main.fad07778.css.map": "/website_testing_and_standard/static/css/main.fad07778.css.map",
+    "main.7e85a26b.js.map": "/website_testing_and_standard/static/js/main.7e85a26b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fad07778.css",
+    "static/js/main.7e85a26b.js"
+  ]
+}
