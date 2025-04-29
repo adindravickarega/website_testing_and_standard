@@ -50,44 +50,44 @@ function Layout({ children }) {
     };
 
     const menuItems = [
-        { name: "Home", path: "/", hasDropdown: false },
-        { name: "Peraturan", path: "/peraturan", hasDropdown: false },
+        { name: "Home", path: "./", hasDropdown: false },
+        { name: "Peraturan", path: "./peraturan", hasDropdown: false },
         { 
             name: "Standar", 
             hasDropdown: true,
             subItems: [
-                { name: "Energi Angin", path: "/standard/energi-angin" },
-                { name: "Energi Air", path: "/standard/energi-air" },
-                { name: "Energi Surya", path: "/standard/energi-surya" },
-                { name: "Energi Biomassa", path: "/standard/energi-biomassa" },
-                { name: "Energi Nuklir", path: "/standard/energi-nuklir" },
-                { name: "Energi Panas Bumi", path: "/standard/energi-panas-bumi" }
+                { name: "Energi Angin", path: "./standard/energi-angin" },
+                { name: "Energi Air", path: "./standard/energi-air" },
+                { name: "Energi Surya", path: "./standard/energi-surya" },
+                { name: "Energi Biomassa", path: "./standard/energi-biomassa" },
+                { name: "Energi Nuklir", path: "./standard/energi-nuklir" },
+                { name: "Energi Panas Bumi", path: "./standard/energi-panas-bumi" }
             ]
         },
         { 
             name: "Riset", 
             hasDropdown: true,
             subItems: [
-                { name: "Energi Angin", path: "/riset/energi-angin" },
-                { name: "Energi Air", path: "/riset/energi-air" },
-                { name: "Energi Biomassa", path: "/riset/energi-biomassa" },
-                { name: "Energi Panas Bumi", path: "/riset/energi-panas-bumi" },
-                { name: "Energi Surya", path: "/riset/energi-surya" }
+                { name: "Energi Angin", path: "./riset/energi-angin" },
+                { name: "Energi Air", path: "./riset/energi-air" },
+                { name: "Energi Biomassa", path: "./riset/energi-biomassa" },
+                { name: "Energi Panas Bumi", path: "./riset/energi-panas-bumi" },
+                { name: "Energi Surya", path: "./riset/energi-surya" }
             ]
         },
-        { name: "Pakar", path: "/pakar", hasDropdown: false },
-        { name: "Metode Uji", path: "/metode-uji", hasDropdown: false },
+        { name: "Pakar", path: "./pakar", hasDropdown: false },
+        { name: "Metode Uji", path: "./metode-uji", hasDropdown: false },
         { 
             name: "Penyedia Jasa", 
             hasDropdown: true,
             subItems: [
-                { name: "Energi Angin", path: "/penyedia-jasa/energi-angin" },
-                { name: "Energi Air", path: "/penyedia-jasa/energi-air" },
-                { name: "Energi Surya", path: "/penyedia-jasa/energi-surya" },
-                { name: "Energi Biomassa", path: "/penyedia-jasa/energi-biomassa" }
+                { name: "Energi Angin", path: "./penyedia-jasa/energi-angin" },
+                { name: "Energi Air", path: "./penyedia-jasa/energi-air" },
+                { name: "Energi Surya", path: "./penyedia-jasa/energi-surya" },
+                { name: "Energi Biomassa", path: "./penyedia-jasa/energi-biomassa" }
             ]
         },
-        { name: "Hubungi Kami", path: "/hubungi-kami", hasDropdown: false }
+        { name: "Hubungi Kami", path: "./hubungi-kami", hasDropdown: false }
     ];
 
     return (
