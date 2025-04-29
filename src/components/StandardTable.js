@@ -29,7 +29,7 @@ function StandardTable({ data }) {
                             </td>                            
                             <td class="px-6 py-4 font-medium ">
                                 {item.link ? (
-                                    <a className='text-blue-600' href={item.link} target="_blank"  alt={item.item}>{item.item}</a>
+                                    <a className='text-blue-600' href={item.link} target="_blank"  alt={item.item}>{item.item} rel="noopener noreferrer"</a>
                                 ) : (
                                     <span>{item.item}</span>
                                 )}
