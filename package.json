@@ -2,7 +2,7 @@
   "name": "website-testing-dan-standard",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://adindravickarega.github.io/website_testing_and_standard",
+  "homepage": "https://website-testing-and-standard.vercel.app/",
   "dependencies": {
     "@tailwindcss/cli": "^4.1.4",
     "@testing-library/jest-dom": "^5.17.0",
