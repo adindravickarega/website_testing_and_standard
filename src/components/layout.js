@@ -148,18 +148,6 @@ function Layout({ children }) {
                     ))}
                 </div>
 
-                {/* Mobile Navigation Toggle */}
-                <button 
-                    className="lg:hidden focus:text-gray-800 focus:bg-gray-200 text-lg transition duration-200 p-3 flex flex-row items-center gap-2 uppercase" 
-                    onClick={() => setOpen(!open)}
-                >
-                    {open ? (
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
-                    ) : (
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
-                    )}
-                </button>
-
                 {/* Mobile Navigation Menu */}
                 {open && (
                     <div className={`bg-sky-600 block lg:hidden transition-all duration-300 ${open ? 'max-h-screen' : 'max-h-0'}`}>
