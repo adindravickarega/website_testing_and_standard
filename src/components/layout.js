@@ -108,7 +108,7 @@ function Layout({ children }) {
 
             <nav className="w-full text-gray-200 bg-sky-600 sticky top-0 px-10 uppercase font-bold z-10" ref={navRef}>
                 {/* Desktop Navigation */}
-                <div className="hidden flex-row items-center gap-2 justify-center lg:flex">
+                <div className="flex flex-row items-center gap-2 justify-center">
                     {menuItems.map((item) => (
                         <div key={item.name} className="relative"
                             onMouseEnter={() => item.hasDropdown && setActiveDropdown(item.name)}
