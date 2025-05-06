@@ -17,7 +17,7 @@ function Layout({ children }) {
         localStorage.setItem('visitCount', newCount);
         setVisits(newCount);
 
-        fetch("https://ipinfo.io/json?token=5ce043b346eb47") // optional token (gratis daftar)
+        fetch("") // optional token (gratis daftar)
             .then(res => res.json())
             .then(data => {
             setCountry(data.country || 'Unknown');
@@ -117,7 +117,7 @@ function Layout({ children }) {
                             {item.hasDropdown ? (
                                 <>
                                     <button 
-                                        className={`focus:text-gray-800 focus:bg-gray-200 text-lg transition duration-200 px-5 py-3 flex flex-row items-center gap-2 uppercase cursor-pointer ${activeDropdown === item.name ? 'text-gray-800 bg-gray-200' : ''}`}
+                                        className={`focus:text-gray-800 focus:bg-gray-200 text-base transition duration-200 px-5 py-3 flex flex-row items-center gap-2 uppercase cursor-pointer ${activeDropdown === item.name ? 'text-gray-800 bg-gray-200' : ''}`}
                                         onClick={() => toggleDropdown(item.name)}
                                     >
                                         {item.name}
@@ -127,7 +127,7 @@ function Layout({ children }) {
                                             <NavLink 
                                                 key={subItem.path}
                                                 to={subItem.path} 
-                                                className="text-lg flex flex-row transition duration-200 text-gray-800 px-5 py-3 hover:bg-sky-600 hover:text-gray-200 whitespace-nowrap"
+                                                className="text-base flex flex-row transition duration-200 text-gray-800 px-5 py-3 hover:bg-sky-600 hover:text-gray-200 whitespace-nowrap"
                                                 onClick={closeAllDropdowns}
                                             >
                                                 {subItem.name}
@@ -138,7 +138,7 @@ function Layout({ children }) {
                             ) : (
                                 <NavLink 
                                     to={item.path} 
-                                    className="hover:text-sky-600 hover:bg-gray-200 text-lg transition duration-200 p-3 flex flex-row items-center gap-2"
+                                    className="hover:text-sky-600 hover:bg-gray-200 text-base transition duration-200 p-3 flex flex-row items-center gap-2"
                                     onClick={closeAllDropdowns}
                                 >
                                     {item.name}
@@ -150,7 +150,7 @@ function Layout({ children }) {
 
                 {/* Mobile Navigation Toggle */}
                 <button 
-                    className="lg:hidden focus:text-gray-800 focus:bg-gray-200 text-lg transition duration-200 p-3 flex flex-row items-center gap-2 uppercase" 
+                    className="lg:hidden focus:text-gray-800 focus:bg-gray-200 text-base transition duration-200 p-3 flex flex-row items-center gap-2 uppercase" 
                     onClick={() => setOpen(!open)}
                 >
                     {open ? (
@@ -168,7 +168,7 @@ function Layout({ children }) {
                                 {item.hasDropdown ? (
                                     <>
                                         <button 
-                                            className="w-full text-left text-lg transition duration-200 px-5 py-3 flex flex-row items-center justify-between gap-2 uppercase"
+                                            className="w-full text-left text-base transition duration-200 px-5 py-3 flex flex-row items-center justify-between gap-2 uppercase"
                                             onClick={() => toggleDropdown(item.name)}
                                         >
                                             {item.name}
@@ -181,7 +181,7 @@ function Layout({ children }) {
                                                 <NavLink 
                                                     key={subItem.path}
                                                     to={subItem.path} 
-                                                    className="block text-lg transition duration-200 text-gray-800 px-8 py-3 hover:bg-sky-600 hover:text-gray-200"
+                                                    className="block text-base transition duration-200 text-gray-800 px-8 py-3 hover:bg-sky-600 hover:text-gray-200"
                                                     onClick={() => {
                                                         closeAllDropdowns();
                                                         setOpen(false);
@@ -195,7 +195,7 @@ function Layout({ children }) {
                                 ) : (
                                     <NavLink 
                                         to={item.path} 
-                                        className="block text-lg transition duration-200 text-gray-200 px-5 py-3 hover:bg-gray-200 hover:text-sky-600"
+                                        className="block text-base transition duration-200 text-gray-200 px-5 py-3 hover:bg-gray-200 hover:text-sky-600"
                                         onClick={() => {
                                             closeAllDropdowns();
                                             setOpen(false);
