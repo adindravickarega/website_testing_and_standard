@@ -47,7 +47,7 @@ Database ini dikembangkan melalui kolaborasi antara Pusat Riset Teknologi Penguj
       {/* Card 2 - Our Goals */}
       <div className="w-2/5 h-full" >
         <div className="shadow-sm rounded-lg overflow-hidden">
-          <img src={process.env.PUBLIC_URL + "/File/image/tiang.jpg"} alt="Our Goals" className="w-full h-1/2" />
+          <img src={process.env.PUBLIC_URL + "/File/image/PLTA.jpg"} alt="Our Goals" className="w-full h-1/2" />
           <div className="p-4">
             <h3 className="text-xl font-semibold">Tujuan</h3>
             <p className="text-gray-600 ">
@@ -84,7 +84,7 @@ Jika anda membutuhkan informasi tentang peraturan-peraturan yang berlaku dan sta
       <img src={process.env.PUBLIC_URL + "/File/image/panel.jpg"} alt="Standard and Testing" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-50"></div>
       <div className="absolute inset-0 flex items-center justify-center p-4">
-        <p className="text-white text-center">The government of Indonesia has set several standards for various RE energy technologies...</p>
+        <p className="text-white text-center">Pemerintah Indonesia telah menetapkan bebagai Standar Nasional Indonesia untuk berbagai teknologi energi baru dan energi terbarukan.</p>
       </div>
     </div>
     <div className="flex flex-col items-center justify-center p-6 md:w-2/3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
@@ -97,7 +97,7 @@ Jika anda membutuhkan informasi tentang peraturan-peraturan yang berlaku dan sta
       <img src={process.env.PUBLIC_URL + "/File/image/hydropower.jpg"} alt="Regulation and Research" className="absolute inset-0 w-full h-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-50"></div>
       <div className="absolute inset-0 flex items-center justify-center p-4">
-        <p className="text-white text-center">The Indonesian government has established and implemented various regulations...</p>
+        <p className="text-white text-center">Pemerintah Indonesia mengatur pemanfaatan dan pengembangan energi baru dan energi terbarukan di Indonesia melalui berbagai peraturan perundang-undangan.</p>
       </div>
     </div>
     <div className="flex flex-col items-center justify-center p-6 md:w-2/3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
