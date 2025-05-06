@@ -1,6 +1,12 @@
 // App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Umum from './pages/peraturan/umum';
+import Bioenergi from './pages/peraturan/bioenergi';
+import AnekaEbt from './pages/peraturan/aneka-ebt';
+import PanasBumi from './pages/peraturan/panas-bumi';
+import TenagaNuklir from './pages/peraturan/tenaga-nuklir';
+
 import EnergiAnginTesting from './pages/penyedia-jasa/energi-angin';
 import EnergiAirTesting from './pages/penyedia-jasa/energi-air';
 import EnergiSuryaTesting from './pages/penyedia-jasa/energi-surya';
@@ -22,6 +28,8 @@ import EnergiPanasBumiRiset from './pages/riset/energi-panas-bumi';
 import EnergiSuryaRiset from './pages/riset/energi-surya';
 
 import HubungiKami from './pages/hubungi-kami/hubungi-kami'; // Adjust path as necessary
+import Pakar from './pages/pakar'; // Adjust path if necessary
+
 
 
 function App() {
@@ -31,6 +39,12 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} /> {/* Mengatur rute default */}
+          <Route path="/peraturan/umum" element={<Umum />} />
+          <Route path="/peraturan/bioenergi" element={<Bioenergi />} />
+          <Route path="/peraturan/aneka-ebt" element={<AnekaEbt />} />
+          <Route path="/peraturan/panas-bumi" element={<PanasBumi />} />
+          <Route path="/peraturan/tenaga-nuklir" element={<TenagaNuklir />} />
+
           <Route path="/penyedia-jasa/energi-angin" element={<EnergiAnginTesting />} /> {/* Mengatur rute default */}
           <Route path="/penyedia-jasa/energi-air" element={<EnergiAirTesting />} />
           <Route path="/penyedia-jasa/energi-Surya" element={<EnergiSuryaTesting />} /> {/* Mengatur rute default */}
@@ -48,7 +62,7 @@ function App() {
           <Route path="/riset/energi-biomassa" element={<EnergiBiomassaRiset />} />
           <Route path="/riset/energi-panas-bumi" element={<EnergiPanasBumiRiset />} />
           <Route path="/riset/energi-surya" element={<EnergiSuryaRiset />} />
-
+          <Route path="/pakar" element={<Pakar />} />
           <Route path="/hubungi-kami" element={<HubungiKami />} />
 
           <Route path="*" element={<NotFound />} />

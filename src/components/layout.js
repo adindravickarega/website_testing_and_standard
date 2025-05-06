@@ -51,7 +51,18 @@ function Layout({ children }) {
 
     const menuItems = [
         { name: "Home", path: "/", hasDropdown: false },
-        { name: "Peraturan", path: "/peraturan", hasDropdown: false },
+        /*{ name: "Peraturan", path: "/peraturan", hasDropdown: false },*/
+        {
+            name: "Peraturan",
+            hasDropdown: true,
+            subItems: [
+              { name: "Umum", path: "/peraturan/umum" },
+              { name: "Bioenergi", path: "/peraturan/bioenergi" },
+              { name: "Aneka EBT", path: "/peraturan/aneka-ebt" },
+              { name: "Panas Bumi", path: "/peraturan/panas-bumi" },
+              { name: "Tenaga Nuklir", path: "/peraturan/tenaga-nuklir" },
+            ]
+        },
         { 
             name: "Standar", 
             hasDropdown: true,
