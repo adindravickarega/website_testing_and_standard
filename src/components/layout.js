@@ -161,7 +161,7 @@ function Layout({ children }) {
 
                 {/* Mobile Navigation Toggle */}
                 <button 
-                    className="lg:hidden focus:text-gray-800 focus:bg-gray-200 text-base transition duration-200 p-3 flex flex-row items-center gap-2 uppercase" 
+                    className="hidden lg:hidden focus:text-gray-800 focus:bg-gray-200 text-base transition duration-200 p-3 flex flex-row items-center gap-2 uppercase" 
                     onClick={() => setOpen(!open)}
                 >
                     {open ? (

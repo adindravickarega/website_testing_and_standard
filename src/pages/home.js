@@ -9,7 +9,7 @@ const Home = () => {
   
   // Array of background images from your public folder
   const backgroundImages = [
-    "/File/image/anemometer.jpg",
+    "/File/image/PLT Panas Bumi.jpg",
     "/File/image/PLTA.jpg",
     "/File/image/panel.jpg",
     "/File/image/hydropower.jpg",
