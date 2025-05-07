@@ -3,7 +3,7 @@ import React from 'react';
 // Table Component to display energy services
 function StandardTable({ data }) {
     return (
-        <div className="relative w-full px-10">
+        <div className="relative overflow-x-auto px-10">
             <table className="bg-white w-full text-sm text-left">
                 <thead className="text-xs text-gray-800 uppercase bg-gray-100">
                     <tr>
@@ -16,9 +16,6 @@ function StandardTable({ data }) {
                         <th scope="col" className="px-6 py-3">
                             Nama
                         </th>
-                        <th scope="col" className="px-6 py-3">
-                            Deskripsi Singkat
-                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,7 +24,7 @@ function StandardTable({ data }) {
                             <td className="px-6 py-4 font-medium text-gray-900">
                                 {item.no}
                             </td>
-                            <td className="px-6 py-4 font-medium">
+                            <td className="px-3 py-4 font-medium">
                                 {item.link ? (
                                     <a
                                         className="text-blue-600"
@@ -43,13 +40,6 @@ function StandardTable({ data }) {
                             </td>
                             <td className="px-6 py-4 font-medium">
                                 {item.nama}
-                            </td>
-                            <td className="px-6 py-4 font-medium text-blue-600">
-                                {item.description.map((link, index) => (
-                                    <p key={index}>
-                                        <a href={link}>{link}</a>
-                                    </p>
-                                ))}
                             </td>
                         </tr>
                     ))}

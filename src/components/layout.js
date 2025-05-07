@@ -87,7 +87,6 @@ function Layout({ children }) {
             ]
         },
         { name: "Pakar", path: "/pakar", hasDropdown: false },
-        { name: "Metode Uji", path: "/metode-uji", hasDropdown: false },
         { 
             name: "Penyedia Jasa", 
             hasDropdown: true,

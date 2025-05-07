@@ -67,7 +67,7 @@ const Home = () => {
   return (
     <>
       {/* Background Image Slider with Slide Animation */}
-      <div className="relative w-full" style={{ height: "60vh" }}>
+      <div className="relative w-full" style={{ height: "50vh" }}>
         {backgroundImages.map((image, index) => (
           <div 
             key={index}
@@ -124,9 +124,8 @@ const Home = () => {
       <section className="my-8">
         <div className="mx-auto" data-aos="fade-up" data-aos-duration="1000">
           <h2 className="text-center text-5xl font-bold my-5 md:my-7 lg:my-10 font-sans uppercase">
-            <span className="block">Database Testing and Standard</span>
-            <span className="block mb-3">for Renewable Energy</span>
-            <hr className="border-2 border-sky-600 w-1/2 mx-auto rounded-full" />
+            <span className="block">Renewable Energy Testing and Standards Database</span>
+            
           </h2>
           <div className="flex justify-center gap-2 flex-wrap" data-aos="fade-up" data-aos-duration="1000">
             
@@ -186,33 +185,35 @@ Jika anda membutuhkan informasi tentang peraturan-peraturan yang berlaku dan sta
         </div>
       </section>
 
-      <section className="flex flex-row md:flex-col px-6 py-8 space-y-8">
-        <div className="flex flex-col md:flex-row gap-6 md:gap-8 bg-white shadow-lg rounded-lg overflow-hidden w-2/5">
-          <div className="w-full md:w-1/3 relative h-[250px]" data-aos="slide-right" data-aos-duration="1000" data-aos-delay="200">
-            <img src={process.env.PUBLIC_URL + "/File/image/panel.jpg"} alt="Standard and Testing" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-50"></div>
-            <div className="absolute inset-0 flex items-center justify-center p-4">
-              <p className="text-white text-center">Pemerintah Indonesia telah menetapkan bebagai Standar Nasional Indonesia untuk berbagai teknologi energi baru dan energi terbarukan.</p>
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-center p-6 md:w-2/3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            <Link className="px-4 py-2 bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600 transition-colors" to="/standard/energi-angin">Klik untuk mengetahui lebih lanjut</Link>
+      <section className="flex px-6 py-8 gap-6"> {/* Removed flex-col and space-y-8, added gap-6 */}
+      {/* Card 1 - Standard and Testing */}
+      <div className="flex flex-col md:flex-row gap-6 md:gap-8 bg-white shadow-lg rounded-lg overflow-hidden w-1/2"> {/* Changed to w-1/2 */}
+        <div className="w-full md:w-1/3 relative h-[250px]" data-aos="slide-right" data-aos-duration="1000" data-aos-delay="200">
+          <img src={process.env.PUBLIC_URL + "/File/image/panel.jpg"} alt="Standard and Testing" className="absolute inset-0 w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-50"></div>
+          <div className="absolute inset-0 flex items-center justify-center p-4">
+            <p className="text-white text-center">Pemerintah Indonesia telah menetapkan berbagai Standar Nasional Indonesia untuk berbagai teknologi energi baru dan energi terbarukan.</p>
           </div>
         </div>
+        <div className="flex flex-col items-center justify-center p-6 md:w-2/3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <Link className="px-4 py-2 bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600 transition-colors" to="/standard/energi-angin">Klik untuk mengetahui lebih lanjut</Link>
+        </div>
+      </div>
 
-        <div className="flex flex-col md:flex-row gap-6 md:gap-8 bg-white shadow-lg rounded-lg overflow-hidden w-2/5">
-          <div className="w-full md:w-1/3 relative h-[250px]" data-aos="slide-left" data-aos-duration="1000" data-aos-delay="200">
-            <img src={process.env.PUBLIC_URL + "/File/image/hydropower.jpg"} alt="Regulation and Research" className="absolute inset-0 w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-50"></div>
-            <div className="absolute inset-0 flex items-center justify-center p-4">
-              <p className="text-white text-center">Pemerintah Indonesia mengatur pemanfaatan dan pengembangan energi baru dan energi terbarukan di Indonesia melalui berbagai peraturan perundang-undangan.</p>
-            </div>
-          </div>
-          <div className="flex flex-col items-center justify-center p-6 md:w-2/3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            <Link className="px-4 py-2 bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600 transition-colors" to="/peraturan/umum">Klik untuk mengetahui lebih lanjut</Link>
+      {/* Card 2 - Regulation and Research */}
+      <div className="flex flex-col md:flex-row gap-6 md:gap-8 bg-white shadow-lg rounded-lg overflow-hidden w-1/2"> {/* Changed to w-1/2 */}
+        <div className="w-full md:w-1/3 relative h-[250px]" data-aos="slide-left" data-aos-duration="1000" data-aos-delay="200">
+          <img src={process.env.PUBLIC_URL + "/File/image/hydropower.jpg"} alt="Regulation and Research" className="absolute inset-0 w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-t from-transparent to-black opacity-50"></div>
+          <div className="absolute inset-0 flex items-center justify-center p-4">
+            <p className="text-white text-center">Pemerintah Indonesia mengatur pemanfaatan dan pengembangan energi baru dan energi terbarukan di Indonesia melalui berbagai peraturan perundang-undangan.</p>
           </div>
         </div>
-      </section>
+        <div className="flex flex-col items-center justify-center p-6 md:w-2/3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <Link className="px-4 py-2 bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600 transition-colors" to="/peraturan/umum">Klik untuk mengetahui lebih lanjut</Link>
+        </div>
+      </div>
+    </section>
     </>
   );
 }

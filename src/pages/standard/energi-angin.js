@@ -210,9 +210,8 @@ const EnergiAnginStandard = () => {
 
     return (
         <div className="container mt-5">
-            <div className="mb-4">
-                <h1 className="display-3">Energi Angin</h1>
-                <h3 className="display-6 text-secondary">Standard</h3>
+            <div className="mb-4 text-center">
+            <h1 style={{ fontSize: '2rem', fontWeight: 'bold' }}>Standar Energi Angin</h1>
             </div>
             <StandardTable data={data} />
         </div>
