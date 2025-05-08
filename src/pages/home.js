@@ -123,10 +123,7 @@ const Home = () => {
       {/* Content Sections */}
       <section className="my-8">
         <div className="mx-auto" data-aos="fade-up" data-aos-duration="1000">
-          <h2 className="text-center text-5xl font-bold my-5 md:my-7 lg:my-10 font-sans uppercase">
-            <span className="block">Renewable Energy Testing and Standards Database</span>
-            
-          </h2>
+          
           <div className="flex justify-center gap-2 flex-wrap" data-aos="fade-up" data-aos-duration="1000">
             
             {/* Card 1 - About Us */}

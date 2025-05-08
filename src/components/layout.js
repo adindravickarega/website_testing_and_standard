@@ -223,7 +223,7 @@ function Layout({ children }) {
             {/* Hero Section */}
             <section className="bg-no-repeat bg-center bg-cover h-auto flex justify-center items-center" style={{backgroundImage: "url('"+ window.location.origin +"/File/image/main_page.jpg')"}}>
                 <div className="w-full text-center py-20 bg-gray-950/50 backdrop-blur-sm hover:backdrop-blur-lg hover:bg-gray-950/70 transition duration-500">
-                    <h1 className="text-3xl lg:text-4xl xl:text-6xl text-white leading-tight uppercase">Database Testing and Standard for Renewable Energy</h1>
+                    <h1 className="text-3xl lg:text-4xl xl:text-6xl text-white leading-tight uppercase">Renewable Energy Testing and Standards Database</h1>
                 </div>
             </section>
 
