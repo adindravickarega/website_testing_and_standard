@@ -116,7 +116,7 @@ function Layout({ children }) {
                     </div>
 
                     {/* Desktop Navigation on the right */}
-                    <div className="hidden lg:flex flex-row items-center gap-2" id="nav-menu">
+                    <div className="flex flex-row items-center gap-2 !flex" id="nav-menu">
                     {menuItems.map((item) => (
                         <div
                         key={item.name}
