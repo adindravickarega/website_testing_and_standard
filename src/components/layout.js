@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { NavLink, Link } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 
 function Layout({ children }) {
     const [open, setOpen] = useState(false);
@@ -88,7 +88,7 @@ function Layout({ children }) {
         },
         { name: "Pakar", path: "/pakar", hasDropdown: false },
         { 
-            name: "Penyedia Jasa", 
+            name: "Penyedia Jasa Uji", 
             hasDropdown: true,
             subItems: [
                 { name: "Energi Angin", path: "/penyedia-jasa/energi-angin" },
@@ -102,73 +102,80 @@ function Layout({ children }) {
 
     return (
         <>
-            <header className='w-full bg-white flex flex-row justify-between items-center pe-10 overflow-hidden'>
-                <Link to="/" className='bg-sky-800 h-14 pe-5'>
-                    <img src={process.env.PUBLIC_URL + "/File/image/logo.png"} alt="Logo" className="h-12" />
-                </Link>
-                <div className="flex space-x-4 py-1">
-                    <Link to="/">
-                        <img src={process.env.PUBLIC_URL + "/File/image/brin.png"} alt="Logo" className="h-12" />
-                    </Link>
-                    <Link to="/">
-                        <img src={process.env.PUBLIC_URL + "/File/image/prtps.png"} alt="Logo" className="h-12" />
-                    </Link>
-                </div>
-            </header>
-
             <nav className="w-full text-gray-200 bg-sky-600 sticky top-0 px-10 uppercase font-bold z-10" ref={navRef}>
-                {/* Desktop Navigation */}
-                <div className="flex flex-row items-center gap-2 justify-center">
+                  <div className="flex items-center justify-between py-3">
+                    {/* Logo on the left */}
+                    <div className="flex-shrink-0">
+                    <NavLink to="/">
+                        <img
+                        src={`${window.location.origin}/File/image/logo-brin.png`} // replace with your actual logo path
+                        alt="Logo"
+                        className="h-10 w-auto"
+                        />
+                    </NavLink>
+                    </div>
+
+                    {/* Desktop Navigation on the right */}
+                    <div className="hidden lg:flex flex-row items-center gap-2" id="nav-menu">
                     {menuItems.map((item) => (
-                        <div key={item.name} className="relative"
-                            onMouseEnter={() => item.hasDropdown && setActiveDropdown(item.name)}
-                            onMouseLeave={() => item.hasDropdown && setActiveDropdown(null)}>
-                            
-                            {item.hasDropdown ? (
-                                <>
-                                    <button 
-                                        className={`focus:text-gray-800 focus:bg-gray-200 text-base transition duration-200 px-5 py-3 flex flex-row items-center gap-2 uppercase cursor-pointer ${activeDropdown === item.name ? 'text-gray-800 bg-gray-200' : ''}`}
-                                        onClick={() => toggleDropdown(item.name)}
-                                    >
-                                        {item.name}
-                                    </button>
-                                    <div className={`absolute bg-gray-100 shadow-2xl shadow-gray-400 z-30 transition-all duration-300 ${activeDropdown === item.name ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}>
-                                        {item.subItems.map((subItem) => (
-                                            <NavLink 
-                                                key={subItem.path}
-                                                to={subItem.path} 
-                                                className="text-base flex flex-row transition duration-200 text-gray-800 px-5 py-3 hover:bg-sky-600 hover:text-gray-200 whitespace-nowrap"
-                                                onClick={closeAllDropdowns}
-                                            >
-                                                {subItem.name}
-                                            </NavLink>
-                                        ))}
-                                    </div>
-                                </>
-                            ) : (
-                                <NavLink 
-                                    to={item.path} 
-                                    className="hover:text-sky-600 hover:bg-gray-200 text-base transition duration-200 p-3 flex flex-row items-center gap-2"
+                        <div
+                        key={item.name}
+                        className="relative"
+                        onMouseEnter={() => item.hasDropdown && setActiveDropdown(item.name)}
+                        onMouseLeave={() => item.hasDropdown && setActiveDropdown(null)}
+                        >
+                        {item.hasDropdown ? (
+                            <>
+                            <button
+                                className={`focus:text-gray-800 focus:bg-gray-200 text-base transition duration-200 px-5 py-3 flex flex-row items-center gap-2 uppercase cursor-pointer ${activeDropdown === item.name ? 'text-gray-800 bg-gray-200' : ''}`}
+                                onClick={() => toggleDropdown(item.name)}
+                            >
+                                {item.name}
+                            </button>
+                            <div
+                                className={`absolute bg-gray-100 shadow-2xl shadow-gray-400 z-30 transition-all duration-300 ${activeDropdown === item.name ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'}`}
+                            >
+                                {item.subItems.map((subItem) => (
+                                <NavLink
+                                    key={subItem.path}
+                                    to={subItem.path}
+                                    className="text-base flex flex-row transition duration-200 text-gray-800 px-5 py-3 hover:bg-sky-600 hover:text-gray-200 whitespace-nowrap"
                                     onClick={closeAllDropdowns}
                                 >
-                                    {item.name}
+                                    {subItem.name}
                                 </NavLink>
-                            )}
+                                ))}
+                            </div>
+                            </>
+                        ) : (
+                            <NavLink
+                            to={item.path}
+                            className="hover:text-sky-600 hover:bg-gray-200 text-base transition duration-200 p-3 flex flex-row items-center gap-2"
+                            onClick={closeAllDropdowns}
+                            >
+                            {item.name}
+                            </NavLink>
+                        )}
                         </div>
                     ))}
-                </div>
+                    </div>
 
-                {/* Mobile Navigation Toggle */}
-                <button 
-                    className="hidden lg:hidden focus:text-gray-800 focus:bg-gray-200 text-base transition duration-200 p-3 flex flex-row items-center gap-2 uppercase" 
+                    {/* Mobile nav toggle (hamburger icon) */}
+                    <button
+                    className="lg:hidden focus:text-gray-800 focus:bg-gray-200 text-base transition duration-200 p-3 flex flex-row items-center gap-2 uppercase"
                     onClick={() => setOpen(!open)}
-                >
+                    >
                     {open ? (
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
                     ) : (
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" /></svg>
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
                     )}
-                </button>
+                    </button>
+                </div>
 
                 {/* Mobile Navigation Menu */}
                 {open && (
@@ -223,7 +230,7 @@ function Layout({ children }) {
             {/* Hero Section */}
             <section className="bg-no-repeat bg-center bg-cover h-auto flex justify-center items-center" style={{backgroundImage: "url('"+ window.location.origin +"/File/image/main_page.jpg')"}}>
                 <div className="w-full text-center py-20 bg-gray-950/50 backdrop-blur-sm hover:backdrop-blur-lg hover:bg-gray-950/70 transition duration-500">
-                    <h1 className="text-3xl lg:text-4xl xl:text-6xl text-white leading-tight uppercase">Renewable Energy Testing and Standards Database</h1>
+                    <h1 className="text-2xl lg:text-3xl xl:text-4xl text-white leading-tight uppercase">Renewable Energy Testing and Standards Database</h1>
                 </div>
             </section>
 
@@ -236,7 +243,7 @@ function Layout({ children }) {
 
             <footer className="bg-gray-200 text-gray-600 text-center py-4">
 
-                <p>&copy; 2024 Database Testing and Standard for Energy. All rights reserved.</p>
+                <p>&copy; 2025 Database Testing and Standard for Energy. All rights reserved.</p>
                 <p>Kunjungan Anda ke-{visits} dari negara: <strong>{country}</strong></p>
             </footer>
         </>

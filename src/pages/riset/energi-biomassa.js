@@ -432,7 +432,7 @@ const EnergiBiomassaRiset = () => {
 
 
     return (
-        <div className="container mt-5">
+        <div className="container mx-auto px-0 mt-5">
             <div className="mb-4 text-center">
             <h1 style={{ fontSize: '2rem', fontWeight: 'bold' }}>Riset Energi Biomassa</h1>
             </div>

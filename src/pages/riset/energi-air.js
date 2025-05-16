@@ -1,5 +1,5 @@
 import React from 'react';
-import TestingTable from '../../components/RisetTable';
+import RisetTable from '../../components/RisetTable';
 
 const EnergiAirRiset = () => {
     const data = [
@@ -147,11 +147,11 @@ const EnergiAirRiset = () => {
 
 
     return (
-        <div className="container mt-5">
+        <div className="container mx-auto px-0 mt-5">
             <div className="mb-4 text-center">
             <h1 style={{ fontSize: '2rem', fontWeight: 'bold' }}>Riset Energi Air</h1>
             </div>
-            <TestingTable data={data} />
+            <RisetTable data={data} />
         </div>
     );
 };

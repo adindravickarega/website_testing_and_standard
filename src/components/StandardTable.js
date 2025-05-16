@@ -3,7 +3,7 @@ import React from 'react';
 // Table Component to display energy services
 function StandardTable({ data }) {
     return (
-        <div className="relative overflow-x-auto px-10">
+        <div className="relative w-full">
             <table className="bg-white w-full text-sm text-left">
                 <thead className="text-xs text-gray-800 uppercase bg-gray-100">
                     <tr>
@@ -20,7 +20,7 @@ function StandardTable({ data }) {
                 </thead>
                 <tbody>
                     {data.map((item) => (
-                        <tr key={item.no} className="border-2 border-gray-100 text-gray-700">
+                        <tr key={item.no} className="border-2 border-gray-100 text-gray-700 bg-gray-100">
                             <td className="px-6 py-4 font-medium text-gray-900">
                                 {item.no}
                             </td>

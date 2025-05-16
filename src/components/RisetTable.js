@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Table Component to display energy services
-function StandardTable({ data }) {
+function RisetTable({ data }) {
     return (
         
 
@@ -19,7 +19,7 @@ function StandardTable({ data }) {
         </thead>
         <tbody>
         {data.map((item) => (
-            <tr key={item.no} class=" border-2 border-gray-100">
+            <tr key={item.no} class=" border-2 border-gray-100 bg-gray-100">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowra">
                     {item.tahun}
                 </th>
@@ -34,5 +34,5 @@ function StandardTable({ data }) {
     );
 }
 
-export default StandardTable;
+export default RisetTable;
 

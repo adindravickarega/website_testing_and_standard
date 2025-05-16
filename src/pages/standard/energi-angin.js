@@ -209,11 +209,13 @@ const EnergiAnginStandard = () => {
 
 
     return (
-        <div className="container mt-5">
+        <div className="container mx-auto px-0 mt-5">
             <div className="mb-4 text-center">
             <h1 style={{ fontSize: '2rem', fontWeight: 'bold' }}>Standar Energi Angin</h1>
             </div>
-            <StandardTable data={data} />
+            <div className="w-full overflow-x-auto"> {/* Added wrapper div for full width */}
+                <StandardTable data={data} />
+            </div>
         </div>
     );
 };
