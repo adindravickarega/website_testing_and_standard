@@ -162,7 +162,7 @@ function Layout({ children }) {
 
                     {/* Mobile nav toggle (hamburger icon) */}
                     <button
-                    className="lg:hidden focus:text-gray-800 focus:bg-gray-200 text-base transition duration-200 p-3 flex flex-row items-center gap-2 uppercase"
+                    className="hidden lg:hidden focus:text-gray-800 focus:bg-gray-200 text-base transition duration-200 p-3 flex flex-row items-center gap-2 uppercase"
                     onClick={() => setOpen(!open)}
                     >
                     {open ? (
@@ -179,7 +179,7 @@ function Layout({ children }) {
 
                 {/* Mobile Navigation Menu */}
                 {open && (
-                    <div className={`bg-sky-600 block lg:hidden transition-all duration-300 ${open ? 'max-h-screen' : 'max-h-0'}`}>
+                    <div className={`hidden bg-sky-600 block lg:hidden transition-all duration-300 ${open ? 'max-h-screen' : 'max-h-0'}`}>
                         {menuItems.map((item) => (
                             <div key={item.name} className="relative">
                                 {item.hasDropdown ? (
